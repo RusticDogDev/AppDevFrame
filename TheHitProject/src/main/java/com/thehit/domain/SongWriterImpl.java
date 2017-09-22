@@ -9,11 +9,14 @@ public class SongWriterImpl implements Songwriter{
 	private int age;
 	private Song song;		
 	
-	public SongWriterImpl(String firstname, String lastname, int age, Song song)
-	{
-		
+	public SongWriterImpl(String firstname, String lastname, int age, Song song) {
+		super();
+		this.firstname = firstname;
+		this.lastname = lastname;
+		this.age = age;
+		this.song = song;
 	}
-	
+			
 	public SongWriterImpl()
 	{
 		

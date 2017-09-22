@@ -16,5 +16,17 @@
 		<constructor-arg name="age" value="21"></constructor-arg>
 		<constructor-arg name="song" ref="marysSong"></constructor-arg>
 	</bean>	
+	
+	<bean id="setterBeanSong" class="com.thehit.domain.Song">
+		<property name="name" value="Setter Marys song"></property>
+		<property name="lyrics" value="Setter lyrics lyrics"></property>		
+	</bean>
+	
+	<bean id="setterSongwriter" class="com.thehit.domain.SongWriterImpl">
+	<property name="firstname" value="Billy"></property>
+	<property name="lastname" value="Walsh"></property>	
+	<property name="age" value="21"></property>	
+	<property name="song" ref="setterBeanSong"></property>
+</bean>
 	 
 </beans>
