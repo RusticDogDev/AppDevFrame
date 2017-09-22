@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-xsi:schemaLocation="http://www.springframework.org/schema/beans 
-http://www.springframework.org/schema/beans/spring-beans.xsd">
-</beans> 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd" >
+	<bean id="ourFirstBean" class="com.thehit.domain.SongWriterImpl"></bean>
+	<bean id="marysSong" class="com.thehit.domain.Song">
+		<constructor-arg name="name" value="Mary's farm"></constructor-arg>
+		<constructor-arg name="lyrics" value="Mary has a little lamb, her fleece is white as snow"></constructor-arg>
+	</bean>
+	<bean id="mary" class="com.thehit.domain.SongWriterImpl">
+		<constructor-arg name="firstname" value="Mary"></constructor-arg>
+		<constructor-arg name="lastname" value="O'Shea"></constructor-arg>
+		<constructor-arg name="age" value="21"></constructor-arg>
+		<constructor-arg name="song" ref="marysSong"></constructor-arg>
+	</bean>	 
+</beans>
